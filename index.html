@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>FranPokedex</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="titulo" >
+            <img src="Pokemon-logo.jpg" alt="pokemonLogo">
+        </div>
+        <div class="navegacion"> 
+            <nav class="desplegable">
+                <label for="Barra"><h2>Selecciona una opcion de busqueda para tu pokemon</h2></label>
+                <div class="botones-desplegables">
+                    <select id="Barra" class="buscadores"> 
+                        <option value="female">Hembra</option>
+                        <option value="male">Macho</option>
+                        <option value="genderless">Sin genero</option>
+                        
+                    </select>
+                    <button type="button" id="boton-desplegable" class="colores" onclick="Buscar_desplegable()">Seleccionar</button>
+                </div>
+                
+            </nav>
+            <div class="Buscador">
+                <form action="" id="for">
+                    <input class="buscadores" type="text" placeholder="Buscar Pokemon" id="Buscar-pokemon">
+                    <button class="colores" type="button" onclick="traerDatos()">Buscar</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="galeria">
+
+    </div>
+
+    
+    
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -66,18 +66,50 @@ label, h2{
     margin-top: 5px;
 }
 
-.buscadores:hover, .colores:hover{
+.buscadores:hover, .colores:hover, .botones__bt:hover{
     background-color: rgb(72, 21, 21);
     color: #fff;
 }
 
 #galeria{
     width: 80vw;
-    height: 100%;
+    height: 100vh;
     margin: auto;
     margin-top: 1em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    border: #fff 2px solid;
+    grid-template-rows: 15fr 1fr;
+    //border: #fff 2px solid;
+    justify-items: center;
+    align-items: center;
 }
+
+#cartas{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+    
+}
+
+.botones{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    //border: rgb(130, 196, 30) 2px solid;
+}
+
+.botones__bt{
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    
+}
+
+.oculto{
+    display: none;
+}
+

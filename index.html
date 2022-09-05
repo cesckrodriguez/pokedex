@@ -19,26 +19,35 @@
                 <label for="Barra"><h2>Selecciona una opcion de busqueda para tu pokemon</h2></label>
                 <div class="botones-desplegables">
                     <select id="Barra" class="buscadores"> 
-                        <option value="female">Hembra</option>
-                        <option value="male">Macho</option>
-                        <option value="genderless">Sin genero</option>
+                        <option value="/gender/1">Hembra</option>
+                        <option value="/gender/2">Macho</option>
+                        <option value="/gender/3">Sin genero</option>
                         
                     </select>
-                    <button type="button" id="boton-desplegable" class="colores" onclick="Buscar_desplegable()">Seleccionar</button>
+                    <button type="button" id="boton-desplegable" class="colores" onclick="All()">Seleccionar</button>
                 </div>
                 
             </nav>
             <div class="Buscador">
                 <form action="" id="for">
                     <input class="buscadores" type="text" placeholder="Buscar Pokemon" id="Buscar-pokemon">
-                    <button class="colores" type="button" onclick="traerDatos()">Buscar</button>
+                    <button class="colores" type="button" onclick="Buscar()">Buscar</button>
                  </form>
             </div>
         </div>
     </div>
 
     <div id="galeria">
+        <div id="cartas" class="gridway">
 
+        </div>
+
+
+        <div class="botones">
+            <button class="botones__bt oculto" id="ant">Anterior</button>
+            <button class="botones__bt oculto" id="next">Siguiente</button>
+        </div>
+        
     </div>
 
     

@@ -15,7 +15,7 @@ async function Buscar(){
     const pokemon = document.getElementById("Buscar-pokemon").value
     var urlPokemones = `https://pokeapi.co/api/v2/pokemon/${pokemon}/?offset=0&limit=1154`;
     var resultado = await traerDatos(urlPokemones);
-    console.log(resultado);
+    console.log(pokemon);
 
     urlPokemones = resultado.forms[0].url
     console.log(urlPokemones);
@@ -43,6 +43,9 @@ async function pintarCards(ficha){
 
 async function All(url){
     var link ="https://pokeapi.co/api/v2/pokemon"
+    if(url){
+      link = url;
+    }
     var respuesta = await traerDatos(link);
     console.log(respuesta)
     
@@ -70,16 +73,32 @@ async function All(url){
        if(respuesta.next){
         const next = document.getElementById("next");
         next.classList.remove("oculto");
-        next.addEventListener("click", ()=>{
-            if(respuesta.next){
-                link = respuesta.next;
-                console.log(link)
-            }
-        })
        }
-
     })
 }
+link ="https://pokeapi.co/api/v2/pokemon"
+var next = document.getElementById("next");
+next.addEventListener("onclick", siguiente);
+
+ async function siguiente(){
+  
+  var respuestaApi =await fetch(link);
+  var respuesta = await respuestaApi.json()
+  urltodos= respuesta.next;
+  All(respuesta.next)
+}
+
+
+var keypress = document.getElementById("Buscar-pokemon");
+keypress.addEventListener("keyup", (event)=>{
+ try {
+   Buscar(event.target.value);
+ } catch (error) {
+  console.log("no se encuentra el pokemon")
+ }
+});
+
+
 
 
 
